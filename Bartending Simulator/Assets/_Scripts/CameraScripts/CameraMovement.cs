@@ -32,33 +32,35 @@ public class CameraMovement : MonoBehaviour
     {
         switch (m_cameraPosition) {
             case CameraPosition.FrontBar: {
-                    this.gameObject.transform.position = m_barArray[0].transform.position;
+                    this.gameObject.transform.position = m_barArray[0].transform.position; // collect order
                     if (isOrderCollected == true) {
-                        m_cameraPosition = CameraPosition.BackBar;
+                        m_cameraPosition = CameraPosition.BackBar; // go to collect alcohol bottles
                     }
                     break;
                 }
             case CameraPosition.BackBar: {
-                    this.gameObject.transform.position = m_barArray[1].transform.position;
-                    if (areAlcoholBottlesCollected == true && isFridgeRequired == false) {
-                        m_cameraPosition = CameraPosition.GlassShelves;
+                    this.gameObject.transform.position = m_barArray[1].transform.position; // collect alcohol
+                    if (areAlcoholBottlesCollected == true && isFridgeRequired == false) { // if fridge isnt needed
+                        m_cameraPosition = CameraPosition.GlassShelves; // go straight to collecting glass
                     } 
-                    else if (areAlcoholBottlesCollected == true && isFridgeRequired == true) {
-                        m_cameraPosition = CameraPosition.Fridge;
+                    else if (areAlcoholBottlesCollected == true && isFridgeRequired == true) { // else if fridge is needed
+                        m_cameraPosition = CameraPosition.Fridge; // go to fridge first
                     }
                     break;
                 }
             case CameraPosition.Fridge: {
-                    this.gameObject.transform.position = m_barArray[2].transform.position;
+                    this.gameObject.transform.position = m_barArray[2].transform.position; // collect soft bottles for drink
                     if (areSoftBottlesCollected == true) {
-                        m_cameraPosition = CameraPosition.GlassShelves;
+                        m_cameraPosition = CameraPosition.GlassShelves; // collect glass
                     }
                     break;
                 }
             case CameraPosition.GlassShelves: {
-                    this.gameObject.transform.position = m_barArray[3].transform.position;
+                    this.gameObject.transform.position = m_barArray[3].transform.position; // collect correct glass for drink
+                    // then go to make drink
                     if (isGlassCollected == true) {
                         m_cameraPosition = CameraPosition.FrontBar;
+                        // Drink shall now be made
                     }
                     break;
                 }
