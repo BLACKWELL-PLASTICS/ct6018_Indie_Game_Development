@@ -16,6 +16,7 @@ public class CameraMovement : MonoBehaviour
     CameraPosition m_cameraPosition;
 
     public bool isOrderCollected = false;
+    public bool isCycleComplete = false;
     public bool areAlcoholBottlesCollected = false;
     public bool areSoftBottlesCollected = false;
     public bool isGlassCollected = false;
@@ -33,7 +34,7 @@ public class CameraMovement : MonoBehaviour
         switch (m_cameraPosition) {
             case CameraPosition.FrontBar: {
                     this.gameObject.transform.position = m_barArray[0].transform.position; // collect order
-                    if (isOrderCollected == true) {
+                    if (isOrderCollected == true && isCycleComplete == false) {
                         m_cameraPosition = CameraPosition.BackBar; // go to collect alcohol bottles
                     }
                     break;
@@ -59,6 +60,7 @@ public class CameraMovement : MonoBehaviour
                     this.gameObject.transform.position = m_barArray[3].transform.position; // collect correct glass for drink
                     // then go to make drink
                     if (isGlassCollected == true) {
+                        isCycleComplete = true;
                         m_cameraPosition = CameraPosition.FrontBar;
                         // Drink shall now be made
                     }
