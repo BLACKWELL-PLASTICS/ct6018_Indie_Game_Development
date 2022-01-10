@@ -2,39 +2,52 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class TicketScript : MonoBehaviour
-{
+public class TicketScript : MonoBehaviour {
     [SerializeField]
-    List<GameObject> gameObjects;
+    List<GameObject> ticketUI;
 
-    UserInterface ticketUI;
+    //UserInterface ticketUI;
+
+    enum Drinks {
+        Daiquiri,
+        Margarita,
+        Cosmopolitan,
+        Long_Island
+    };
+
+    private int randomDrink;
+    private Drinks currentDrink;
 
     private void Start() {
-        ticketUI = new UserInterface();
+        //ticketUI = new UserInterface();
 
         foreach (GameObject item in GameObject.FindGameObjectsWithTag("TicketUI")) {
-            gameObjects.Add(item);
+            ticketUI.Add(item);
+            item.SetActive(false);
         }
+
+        randomDrink = Random.Range(0, 3);
+        currentDrink = (Drinks)randomDrink;
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        if (Input.GetMouseButtonDown(0)) {
+    private void OnMouseDown() {
+        foreach (GameObject item in ticketUI) {
+            item.SetActive(true);
+        }
 
-            RaycastHit2D hit;
-            Ray2D ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+        switch (currentDrink) {
+            case Drinks.Daiquiri: {
 
-            // Casts the ray and get the first game object hit
-            if (Physics2D.Raycast(ray, out hit)
-               {
-                Debug.Log(hit.transform.name);
-
-                if (hit.transform.name == this.gameObject.name) {
-                    ticketUI.m_gameObjects = gameObjects;
-                    ticketUI.ActivateObjects();
+                    break;
                 }
-            }
+            case Drinks.Margarita: {
+
+                    break;
+                }
+            case Drinks.Cosmopolitan: {
+
+                    break;
+                }
         }
     }
 }
