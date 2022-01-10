@@ -68,6 +68,8 @@
     <Compile Include="Assets\_Scripts\MechanicScripts\GyroControl.cs" />
     <Compile Include="Assets\_Scripts\MechanicScripts\TicketScript.cs" />
     <Compile Include="Assets\_Scripts\MechanicScripts\TicketSpawnScript.cs" />
+    <Compile Include="Assets\_Scripts\UI\Buttons.cs" />
+    <Compile Include="Assets\_Scripts\UI\Recipies.cs" />
     <Compile Include="Assets\_Scripts\UI\UserInterface.cs" />
     <Reference Include="UnityEngine">
       <HintPath>D:/unity_versions/2019.4.14f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
