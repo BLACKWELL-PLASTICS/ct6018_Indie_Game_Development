@@ -7,4 +7,9 @@ public class Buttons : MonoBehaviour {
         bool ison = obj.activeInHierarchy;
         obj.gameObject.SetActive(!ison);
     }
+
+    public void AudioPlay(AudioSource audio) {
+        audio.Play();
+    }
+        
 }

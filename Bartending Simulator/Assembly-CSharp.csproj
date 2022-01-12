@@ -65,6 +65,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\_Scripts\CameraScripts\CameraMovement.cs" />
+    <Compile Include="Assets\_Scripts\MechanicScripts\Bottle.cs" />
     <Compile Include="Assets\_Scripts\MechanicScripts\GyroControl.cs" />
     <Compile Include="Assets\_Scripts\MechanicScripts\TicketScript.cs" />
     <Compile Include="Assets\_Scripts\MechanicScripts\TicketSpawnScript.cs" />

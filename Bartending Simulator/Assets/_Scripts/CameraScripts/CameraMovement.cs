@@ -15,12 +15,12 @@ public class CameraMovement : MonoBehaviour
 
     CameraPosition m_cameraPosition;
 
-    public bool isOrderCollected = false;
-    public bool isCycleComplete = false;
-    public bool areAlcoholBottlesCollected = false;
-    public bool areSoftBottlesCollected = false;
-    public bool isGlassCollected = false;
-    public bool isFridgeRequired = false;
+    public static bool isOrderCollected = false;
+    public static bool isCycleComplete = false;
+    public static bool areAlcoholBottlesCollected = false;
+    public static bool areSoftBottlesCollected = false;
+    public static bool isGlassCollected = false;
+    public static bool isFridgeRequired = false;
 
     // Start is called before the first frame update
     void Start()
