@@ -7,8 +7,7 @@ public class TicketScript : MonoBehaviour {
     [SerializeField]
     List<GameObject> ticketUI;
 
-    [SerializeField]
-    Texture[] textureArray;
+    public Texture[] textureArray;
 
     public AudioSource notificationBell;
 
@@ -20,7 +19,8 @@ public class TicketScript : MonoBehaviour {
     }
 
     private int randomDrink;
-    public Drinks currentDrink;
+    private Drinks currentDrink;
+    public Drinks GetCurrentDrink() { return currentDrink; }
     
     int index = 0;
 
@@ -75,6 +75,7 @@ public class TicketScript : MonoBehaviour {
                     foreach (GameObject item in ticketUI) {
                         if (item.name == "DrinkName") {
                             item.GetComponent<RawImage>().texture = textureArray[2];
+                            CameraMovement.isFridgeRequired = false;
                         }
                     }
                     break;
@@ -83,6 +84,7 @@ public class TicketScript : MonoBehaviour {
                     foreach (GameObject item in ticketUI) {
                         if (item.name == "DrinkName") {
                             item.GetComponent<RawImage>().texture = textureArray[3];
+                            CameraMovement.isFridgeRequired = false;
                         }
                     }
                     break;
@@ -91,6 +93,16 @@ public class TicketScript : MonoBehaviour {
                     foreach (GameObject item in ticketUI) {
                         if (item.name == "DrinkName") {
                             item.GetComponent<RawImage>().texture = textureArray[4];
+                            CameraMovement.isFridgeRequired = false;
+                        }
+                    }
+                    break;
+                }
+            case Drinks.Long_Island: {
+                    foreach (GameObject item in ticketUI) {
+                        if (item.name == "DrinkName") {
+                            item.GetComponent<RawImage>().texture = textureArray[4]; // TODO - change texture
+                            CameraMovement.isFridgeRequired = true;
                         }
                     }
                     break;

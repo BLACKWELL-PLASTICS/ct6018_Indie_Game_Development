@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class Recipies : MonoBehaviour
 {
     int index = 0;
+
     [SerializeField]
     Texture[] textures;
     // Start is called before the first frame update
