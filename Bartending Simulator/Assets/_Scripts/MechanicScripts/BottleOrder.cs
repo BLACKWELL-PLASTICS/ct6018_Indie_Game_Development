@@ -61,13 +61,18 @@ public class BottleOrder : MonoBehaviour {
     }
 
     public void AddBottle(GameObject gameObject) {
+        bool isCollected = false;
         foreach (Bottle item in bottlesNeeded) {
             if (gameObject.name == item.gameObject.name) {
                 bottlesCollected.Add(item);
                 item.gameObject.SetActive(false);
+                isCollected = true;
                 int i = Random.Range(1, 3);
                 GameObject.Find("as_bottles" + i.ToString()).GetComponent<AudioSource>().Play();
             }
+        }
+        if (isCollected == false) {
+            Crosses.index++;
         }
     }
 

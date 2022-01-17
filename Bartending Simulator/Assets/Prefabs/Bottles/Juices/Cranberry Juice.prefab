@@ -69,7 +69,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 2
+  m_SortingOrder: 3
   m_Sprite: {fileID: 21300000, guid: 92c921aad7068844f8e94bb7361e987f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -93,6 +93,7 @@ GameObject:
   - component: {fileID: 5410434240659609206}
   - component: {fileID: 1327558265}
   - component: {fileID: 1327558264}
+  - component: {fileID: 1327558268}
   m_Layer: 0
   m_Name: Cranberry Juice
   m_TagString: Untagged
@@ -174,13 +175,13 @@ Rigidbody2D:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5933753548311557097}
   m_BodyType: 0
-  m_Simulated: 0
+  m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 0
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -212,3 +213,15 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 2.3680315, y: 9.02}
   m_EdgeRadius: 0
+--- !u!114 &1327558268
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5933753548311557097}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d890fb31a17911443b98009f5cb7dfc6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
