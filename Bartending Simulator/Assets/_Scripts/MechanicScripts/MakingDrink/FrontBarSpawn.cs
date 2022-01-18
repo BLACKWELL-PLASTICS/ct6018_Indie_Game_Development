@@ -77,8 +77,8 @@ public class FrontBarSpawn : MonoBehaviour {
                     break;
             }
             newBottle.GetComponent<Bottle>().enabled = false;
-            newBottle.AddComponent<GyroControl>();
-            newBottle.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezeAll;
+            newBottle.AddComponent<Accelerometer>();
+            //newBottle.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezeAll;
             spawned = true;
             i = index;
         }

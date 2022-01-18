@@ -70,6 +70,7 @@
     <Compile Include="Assets\_Scripts\MechanicScripts\EndLevel.cs" />
     <Compile Include="Assets\_Scripts\MechanicScripts\Glass.cs" />
     <Compile Include="Assets\_Scripts\MechanicScripts\GlassNeeded.cs" />
+    <Compile Include="Assets\_Scripts\MechanicScripts\MakingDrink\Accelerometer.cs" />
     <Compile Include="Assets\_Scripts\MechanicScripts\MakingDrink\FrontBarSpawn.cs" />
     <Compile Include="Assets\_Scripts\MechanicScripts\MakingDrink\GyroControl.cs" />
     <Compile Include="Assets\_Scripts\MechanicScripts\TicketScript.cs" />
