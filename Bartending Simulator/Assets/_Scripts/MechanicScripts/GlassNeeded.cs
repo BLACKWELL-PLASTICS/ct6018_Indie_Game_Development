@@ -57,6 +57,7 @@ public class GlassNeeded : MonoBehaviour
         if (gameObject.name == glassNeeded.name) {
             // Correct Choice
             CameraMovement.isGlassCollected = true;
+            FrontBarSpawn.index = 1;
             GameObject.Find("as_glass").GetComponent<AudioSource>().Play();
         } else {
             Crosses.index++;

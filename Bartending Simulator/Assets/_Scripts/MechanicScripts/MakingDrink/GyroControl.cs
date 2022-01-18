@@ -26,7 +26,7 @@ public class GyroControl : MonoBehaviour
             gyro.enabled = true;
 
             bottleContainer.transform.rotation = Quaternion.Euler(90f, 90f, 0f);
-            rotation = new Quaternion(0, 0, 1, 0);
+            rotation = new Quaternion(1, 1, 0, 0);
 
             return true;
         }

@@ -5,6 +5,8 @@ TagManager:
   serializedVersion: 2
   tags:
   - TicketUI
+  - BSP
+  - Bottle
   layers:
   - Default
   - TransparentFX
