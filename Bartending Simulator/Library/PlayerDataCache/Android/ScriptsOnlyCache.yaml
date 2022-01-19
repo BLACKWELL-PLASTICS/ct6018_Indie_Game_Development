@@ -20,8 +20,6 @@ ScriptsOnlyBuild:
     - UnityEditor.Tilemaps.GridPalettes
     - UnityEditor.Tilemaps.SceneViewGridManager
     - UnityEditor.Tilemaps.TileDragAndDropManager
-    Unity.Mobile.AndroidLogcat.Editor.dll:
-    - Unity.Android.Logcat.AndroidLogcatManager
     Unity.Rider.Editor.dll:
     - Packages.Rider.Editor.UnitTesting.CallbackData
     UnityEditor.TestRunner.dll:
@@ -34,6 +32,7 @@ ScriptsOnlyBuild:
     - UnityEngine.UI.Button
     - UnityEngine.UI.CanvasScaler
     - UnityEngine.UI.GraphicRaycaster
+    - UnityEngine.UI.Image
     - UnityEngine.UI.RawImage
     - UnityEngine.UI.Text
   sceneClasses:
@@ -73,6 +72,8 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 11582}
     - Class: 114
+      Script: {instanceID: 11636}
+    - Class: 114
       Script: {instanceID: 11652}
     - Class: 114
       Script: {instanceID: 12040}
@@ -93,11 +94,11 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 13886}
     - Class: 114
-      Script: {instanceID: 14184}
+      Script: {instanceID: 14186}
     - Class: 114
-      Script: {instanceID: 14534}
+      Script: {instanceID: 14536}
     - Class: 114
-      Script: {instanceID: 14646}
+      Script: {instanceID: 14648}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -395,7 +396,7 @@ ScriptsOnlyBuild:
     className: SpriteShape
   - hash:
       serializedVersion: 2
-      Hash: 0eccbc829fcd5174eebac7826dca193a
+      Hash: 63a8e3b8810735b383b0430541fa1487
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Crosses
@@ -579,6 +580,12 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.TestRunner.dll
     namespaceName: UnityEngine.TestTools
     className: BeforeAfterTestCommandState
+  - hash:
+      serializedVersion: 2
+      Hash: 893dc8c286aac6a017fb14862ed9848a
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Pouring
   - hash:
       serializedVersion: 2
       Hash: c3d3430df9e3ea95e3e3d587961390fb

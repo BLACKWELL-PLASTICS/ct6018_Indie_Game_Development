@@ -17,7 +17,7 @@ public class Timer : MonoBehaviour
     {
         txt_timer = gameObject.GetComponent<Text>();
         // Set length depending on drink type
-        timer = 20;
+        timer = 60;
     }
 
     // Update is called once per frame

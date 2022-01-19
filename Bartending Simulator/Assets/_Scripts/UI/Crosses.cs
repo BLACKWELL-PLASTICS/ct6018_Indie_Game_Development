@@ -7,6 +7,8 @@ public class Crosses : MonoBehaviour
     [SerializeField] GameObject[] crosses;
     public static int index = 0;
 
+    [SerializeField] GameObject restart;
+
     // Start is called before the first frame update
     void Start() {
         crosses[0].SetActive(false);
@@ -29,6 +31,7 @@ public class Crosses : MonoBehaviour
             crosses[0].SetActive(true);
             crosses[1].SetActive(true);
             crosses[2].SetActive(true);
+            restart.SetActive(true);
             Timer.timer = 0.0f;
             // End Game Condition
         }

@@ -29,16 +29,19 @@ public class Accelerometer : MonoBehaviour {
                 // Play ended pouring sound
 
             }
+            // Ended Pouring is true
+            pouring.EndedPouring = true;
             pouring.isPouring = false;
             // rb.rotation
             a = Mathf.Lerp(0.0f, 130.0f, angle * moveSpeed * Time.deltaTime);
             Quaternion target = Quaternion.Euler(0.0f, 0.0f, a);
             transform.rotation = target;
-        } else {
+        } else if (angle > 0.95f) {
             Quaternion target = Quaternion.Euler(0.0f, 0.0f, 130.0f);
             transform.rotation = target;
             // Start pouring
             pouring.isPouring = true;
+            pouring.EndedPouring = false;
         }
     }
 
