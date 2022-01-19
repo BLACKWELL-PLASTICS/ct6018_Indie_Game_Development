@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Accelerometer : MonoBehaviour {
+    Pouring pouring;
     Rigidbody2D rb;
     float directionY;
     float moveSpeed = 20f;
@@ -12,6 +13,7 @@ public class Accelerometer : MonoBehaviour {
     // Start is called before the first frame update
     void Start() {
         rb = GetComponent<Rigidbody2D>();
+        pouring = GetComponent<Pouring>();
     }
 
     // Update is called once per frame
@@ -22,7 +24,12 @@ public class Accelerometer : MonoBehaviour {
         transform.position = new Vector2(transform.position.x, Mathf.Clamp(transform.position.y, 10.40f, 11.40f));
 
         // As glass moves up, also rotate
-        if (angle != 1f) {
+        if (angle < 0.95f) {
+            if (pouring.isPouring == true) {
+                // Play ended pouring sound
+
+            }
+            pouring.isPouring = false;
             // rb.rotation
             a = Mathf.Lerp(0.0f, 130.0f, angle * moveSpeed * Time.deltaTime);
             Quaternion target = Quaternion.Euler(0.0f, 0.0f, a);
@@ -30,7 +37,8 @@ public class Accelerometer : MonoBehaviour {
         } else {
             Quaternion target = Quaternion.Euler(0.0f, 0.0f, 130.0f);
             transform.rotation = target;
-            //rb.rotation = 145.0f;
+            // Start pouring
+            pouring.isPouring = true;
         }
     }
 

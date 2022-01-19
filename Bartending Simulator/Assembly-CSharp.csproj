@@ -72,6 +72,7 @@
     <Compile Include="Assets\_Scripts\MechanicScripts\GlassNeeded.cs" />
     <Compile Include="Assets\_Scripts\MechanicScripts\MakingDrink\Accelerometer.cs" />
     <Compile Include="Assets\_Scripts\MechanicScripts\MakingDrink\FrontBarSpawn.cs" />
+    <Compile Include="Assets\_Scripts\MechanicScripts\MakingDrink\Pouring.cs" />
     <Compile Include="Assets\_Scripts\MechanicScripts\TicketScript.cs" />
     <Compile Include="Assets\_Scripts\MechanicScripts\TicketSpawnScript.cs" />
     <Compile Include="Assets\_Scripts\MechanicScripts\Timer.cs" />

@@ -116,7 +116,7 @@ MonoBehaviour:
   m_MinSize: {x: 709, y: 492}
   m_MaxSize: {x: 18004, y: 14042}
   vertical: 0
-  controlID: 15
+  controlID: 57
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -167,7 +167,7 @@ MonoBehaviour:
   m_MinSize: {x: 232, y: 492}
   m_MaxSize: {x: 10002, y: 14042}
   vertical: 1
-  controlID: 16
+  controlID: 58
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -241,8 +241,8 @@ MonoBehaviour:
     y: 0
     width: 541
     height: 723
-  m_MinSize: {x: 275, y: 50}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 276, y: 71}
+  m_MaxSize: {x: 4001, y: 4021}
   m_ActualView: {fileID: 16}
   m_Panes:
   - {fileID: 16}
@@ -370,9 +370,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 
-      m_LastClickedID: 0
-      m_ExpandedIDs: b8e6ffffcce6ffff82e7ffff22e8ffff36e8ffffece8ffff9ce9ffffb0e9ffff66eaffff0cebffff20ebffffd6ebffff90ecffffa4ecffff5aedffffe6eefffffaeeffffb4efffffbaf2ffff
+      m_SelectedIDs: 36f2ffff
+      m_LastClickedID: -3530
+      m_ExpandedIDs: 20f4ffff9a520000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -425,14 +425,14 @@ MonoBehaviour:
   m_ShowContextualTools: 0
   m_WindowGUID: e6eb5826fb21d00438cdb0f97ad540ae
   m_Gizmos: 1
-  m_SceneIsLit: 1
+  m_SceneIsLit: 0
   m_SceneLighting: 1
   m_2DMode: 1
   m_isRotationLocked: 0
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 11.7362995, y: 13.110171, z: -0.24668445}
+    m_Target: {x: -30.387, y: 2.2617, z: 0}
     speed: 2
     m_Value: {x: 11.7362995, y: 13.110171, z: -0.24668445}
   m_RenderMode: 0
@@ -447,7 +447,7 @@ MonoBehaviour:
   m_SceneViewState:
     showFog: 1
     showMaterialUpdate: 0
-    showSkybox: 1
+    showSkybox: 0
     showFlares: 1
     showImageEffects: 1
     showParticleSystems: 1
@@ -484,7 +484,7 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 6.9187393
+    m_Target: 2.2610247
     speed: 2
     m_Value: 6.9187393
   m_Ortho:
@@ -550,11 +550,11 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/_Scripts/MechanicScripts/MakingDrink
+    - Assets/Prefabs/Bottles
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/_Scripts/MechanicScripts/MakingDrink
+  - Assets/Prefabs/Bottles
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Users\Student\Documents\Github Repos\CT6018_Indie_Game_Development\Bartending
     Simulator
@@ -562,9 +562,9 @@ MonoBehaviour:
     m_IsLocked: 1
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: cc3f0000
-    m_LastClickedID: 16332
-    m_ExpandedIDs: 00000000aa3f0000b03f0000c83f000000ca9a3b
+    m_SelectedIDs: 7a520000
+    m_LastClickedID: 21114
+    m_ExpandedIDs: 00000000be3d0000c63d0000ca3d0000d43d000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -592,7 +592,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000aa3f0000
+    m_ExpandedIDs: 00000000be3d0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 

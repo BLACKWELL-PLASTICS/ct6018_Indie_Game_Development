@@ -20,6 +20,8 @@ ScriptsOnlyBuild:
     - UnityEditor.Tilemaps.GridPalettes
     - UnityEditor.Tilemaps.SceneViewGridManager
     - UnityEditor.Tilemaps.TileDragAndDropManager
+    Unity.Mobile.AndroidLogcat.Editor.dll:
+    - Unity.Android.Logcat.AndroidLogcatManager
     Unity.Rider.Editor.dll:
     - Packages.Rider.Editor.UnitTesting.CallbackData
     UnityEditor.TestRunner.dll:
@@ -61,41 +63,41 @@ ScriptsOnlyBuild:
     - Class: 104
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 11368}
+      Script: {instanceID: 11278}
     - Class: 114
-      Script: {instanceID: 11384}
+      Script: {instanceID: 11294}
     - Class: 114
-      Script: {instanceID: 11550}
+      Script: {instanceID: 11460}
     - Class: 114
-      Script: {instanceID: 11580}
+      Script: {instanceID: 11490}
     - Class: 114
-      Script: {instanceID: 11672}
+      Script: {instanceID: 11582}
     - Class: 114
-      Script: {instanceID: 11742}
+      Script: {instanceID: 11652}
     - Class: 114
-      Script: {instanceID: 12132}
+      Script: {instanceID: 12040}
     - Class: 114
-      Script: {instanceID: 12222}
+      Script: {instanceID: 12130}
     - Class: 114
-      Script: {instanceID: 12430}
+      Script: {instanceID: 12338}
     - Class: 114
-      Script: {instanceID: 12458}
+      Script: {instanceID: 12366}
     - Class: 114
-      Script: {instanceID: 13168}
+      Script: {instanceID: 13076}
     - Class: 114
-      Script: {instanceID: 13204}
+      Script: {instanceID: 13112}
     - Class: 114
-      Script: {instanceID: 13776}
+      Script: {instanceID: 13684}
     - Class: 114
-      Script: {instanceID: 13832}
+      Script: {instanceID: 13742}
     - Class: 114
-      Script: {instanceID: 13976}
+      Script: {instanceID: 13886}
     - Class: 114
-      Script: {instanceID: 14274}
+      Script: {instanceID: 14184}
     - Class: 114
-      Script: {instanceID: 14624}
+      Script: {instanceID: 14534}
     - Class: 114
-      Script: {instanceID: 14736}
+      Script: {instanceID: 14646}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128

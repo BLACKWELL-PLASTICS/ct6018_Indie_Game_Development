@@ -78,6 +78,7 @@ public class FrontBarSpawn : MonoBehaviour {
             }
             newBottle.GetComponent<Bottle>().enabled = false;
             newBottle.AddComponent<Accelerometer>();
+            newBottle.AddComponent<Pouring>();
             //newBottle.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezeAll;
             spawned = true;
             i = index;
