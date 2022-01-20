@@ -113,10 +113,10 @@ MonoBehaviour:
     y: 30
     width: 1536
     height: 723
-  m_MinSize: {x: 678, y: 342}
-  m_MaxSize: {x: 12003, y: 8042}
+  m_MinSize: {x: 679, y: 342}
+  m_MaxSize: {x: 12004, y: 8042}
   vertical: 0
-  controlID: 57
+  controlID: 119
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -136,8 +136,8 @@ MonoBehaviour:
     y: 0
     width: 358
     height: 723
-  m_MinSize: {x: 200, y: 200}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 201, y: 221}
+  m_MaxSize: {x: 4001, y: 4021}
   m_ActualView: {fileID: 12}
   m_Panes:
   - {fileID: 12}
@@ -167,7 +167,7 @@ MonoBehaviour:
   m_MinSize: {x: 202, y: 342}
   m_MaxSize: {x: 4002, y: 8042}
   vertical: 1
-  controlID: 58
+  controlID: 82
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -187,8 +187,8 @@ MonoBehaviour:
     y: 0
     width: 636
     height: 396
-  m_MinSize: {x: 200, y: 200}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 202, y: 221}
+  m_MaxSize: {x: 4002, y: 4021}
   m_ActualView: {fileID: 13}
   m_Panes:
   - {fileID: 13}
@@ -370,23 +370,23 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 
+      m_SelectedIDs: 7aa5ffff
       m_LastClickedID: 0
-      m_ExpandedIDs: e4d1fffff8d1ffffaed2ffffe6d4fffffad4fffffcd4ffff40d5ffff54d5ffff0ad6ffffaed6ffffc2d6ffff78d7ffff1cd8ffff30d8ffffe6d8ffff8ed9ffffa2d9ffff58daffff06deffff1adeffffd0deffff16e0ffff2ae0ffffe0e0ffffdae1ffffeee1ffffa4e2ffff5ae3ffff6ee3ffff24e4ffffc4e5ffffd8e5ffff8ee6ffffe6eafffff8eaffffb0ebffffc0ecffffd4ecffff8cedffff46eeffff5aeeffff12efffffbeefffffd2efffff8af0ffff62f1ffff76f1ffff2ef2ffff92f3ffffa6f3ffff5ef4ffff30f7ffff44f7fffffcf7ffff66fbffffae430000947900001e890000dcbc0000
+      m_ExpandedIDs: 02d7ffff16d7ffffced7ffffced9ffffe2d9ffffe4d9ffffa8daffffbcdaffff74dbffffe4e2fffff8e2ffffb0e3ffffcce4ffffe0e4ffff98e5ffff66fbffffb03b0000ec3b0000407d0000588a00000e8b0000668c00007c8c00008c8c0000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
-        m_Name: 
-        m_OriginalName: 
+        m_Name: Martini(Clone)
+        m_OriginalName: Martini(Clone)
         m_EditFieldRect:
           serializedVersion: 2
           x: 0
           y: 0
           width: 0
           height: 0
-        m_UserData: 0
+        m_UserData: -23174
         m_IsWaitingForDelay: 0
         m_IsRenaming: 0
-        m_OriginalEventType: 11
+        m_OriginalEventType: 0
         m_IsRenamingFilename: 0
         m_ClientGUIView: {fileID: 6}
       m_SearchString: 
@@ -432,9 +432,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 2738.5212, y: 119.440186, z: -10.016358}
+    m_Target: {x: 11.020073, y: 11.458263, z: -2.0223885}
     speed: 2
-    m_Value: {x: 2738.5212, y: 119.440186, z: -10.016358}
+    m_Value: {x: 11.020073, y: 11.458263, z: -2.0223885}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -484,9 +484,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 306.20688
+    m_Target: 4.7868958
     speed: 2
-    m_Value: 306.20688
+    m_Value: 4.7868958
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -550,21 +550,21 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/_Scripts/UI
+    - Assets/Prefabs/Bar
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/_Scripts/UI
+  - Assets/Prefabs/Bar
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Users\Student\Documents\Github Repos\CT6018_Indie_Game_Development\Bartending
     Simulator
   m_LockTracker:
     m_IsLocked: 1
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 2}
-    m_SelectedIDs: e27b0000
-    m_LastClickedID: 31714
-    m_ExpandedIDs: 00000000d43d0000dc3d0000e03d0000e23d000000ca9a3b
+    scrollPos: {x: 0, y: 79}
+    m_SelectedIDs: b2420000
+    m_LastClickedID: 17074
+    m_ExpandedIDs: 00000000ee3d0000fa3d0000fe3d0000023e00000a3e000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -592,7 +592,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000d43d0000
+    m_ExpandedIDs: 00000000ee3d0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -617,8 +617,8 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
-    m_SelectedInstanceIDs: 
-    m_LastClickedInstanceID: 0
+    m_SelectedInstanceIDs: 7aa5ffff
+    m_LastClickedInstanceID: -23174
     m_HadKeyboardFocusLastEvent: 1
     m_ExpandedInstanceIDs: e039000000000000
     m_RenameOverlay:

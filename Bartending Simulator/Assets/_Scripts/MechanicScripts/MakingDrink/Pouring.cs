@@ -22,7 +22,7 @@ public class Pouring : MonoBehaviour {
     void Start() {
         ticketScript = GameObject.Find("btn_Ticket").GetComponent<TicketScript>();
         currentDrink = ticketScript.GetCurrentDrink();
-        text = GameObject.Find("txt_timer (1)").GetComponent<Text>();
+        text = GameObject.Find("txt_PouringTimer").GetComponent<Text>();
 
         Timer();
     }
@@ -37,18 +37,28 @@ public class Pouring : MonoBehaviour {
                 StartedPouring = false;
             }
 
+            if (timer < 0.0f && timer > -1.0f) {
+                text.color = Color.green;
+            }
+            if (timer < -1.0f) {
+                text.color = Color.red;
+            }
+
             // count down timer
             timer -= Time.deltaTime;
         }
 
         if (EndedPouring == true) {
+            text.color = Color.white;
             if (timer <= 0.0f && timer > -1.0f) {
                 // next bottle
                 FrontBarSpawn.index++;
+                text.text = "";
                 Timer();
             } else if (timer <= -1.0f) {
                 Crosses.index++;
                 FrontBarSpawn.index++;
+                text.text = "";
                 Timer();
             }
         }

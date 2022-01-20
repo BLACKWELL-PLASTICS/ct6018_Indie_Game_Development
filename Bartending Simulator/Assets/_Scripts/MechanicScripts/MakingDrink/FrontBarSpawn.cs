@@ -5,6 +5,8 @@ using UnityEngine;
 public class FrontBarSpawn : MonoBehaviour {
     public GameObject[] bottles;
 
+    [SerializeField] GameObject[] Shakers = new GameObject[2];
+
     GameObject bottleSpawnPoint;
     public static int index = 0;
     int i;
@@ -15,6 +17,7 @@ public class FrontBarSpawn : MonoBehaviour {
     // Start is called before the first frame update
     void Start() {
         bottleSpawnPoint = GameObject.FindGameObjectWithTag("BSP");
+        Shakers[0] = GameObject.Find("Boston_Shaker_Open");
         i = index;
         ticketScript = GameObject.Find("btn_Ticket").GetComponent<TicketScript>();
         currentDrink = ticketScript.GetCurrentDrink();
@@ -38,6 +41,13 @@ public class FrontBarSpawn : MonoBehaviour {
                     } else if (index == 3) {
                         newBottle = Instantiate(bottles[10], bottleSpawnPoint.transform.position, Quaternion.identity); // Sugar
                     }
+                    if (index == 4) {
+                        Shakers[0].GetComponent<SpriteRenderer>().sprite = Shakers[1].GetComponent<SpriteRenderer>().sprite;
+                        Shakers[0].name = "Boston_Shaker_Closed";
+                        Shakers[0].AddComponent<Shaking>();
+                        spawned = true;
+                    }
+
                     break;
                 case TicketScript.Drinks.Margarita:
                     if (index == 1) {
@@ -46,6 +56,12 @@ public class FrontBarSpawn : MonoBehaviour {
                         newBottle = Instantiate(bottles[4], bottleSpawnPoint.transform.position, Quaternion.identity); // Triple Sec
                     } else if (index == 3) {
                         newBottle = Instantiate(bottles[9], bottleSpawnPoint.transform.position, Quaternion.identity); // Lime
+                    }
+                    if (index == 4) {
+                        Shakers[0].GetComponent<SpriteRenderer>().sprite = Shakers[1].GetComponent<SpriteRenderer>().sprite;
+                        Shakers[0].name = "Boston_Shaker_Closed";
+                        Shakers[0].AddComponent<Shaking>();
+                        spawned = true;
                     }
                     break;
                 case TicketScript.Drinks.Cosmopolitan:
@@ -57,6 +73,12 @@ public class FrontBarSpawn : MonoBehaviour {
                         newBottle = Instantiate(bottles[9], bottleSpawnPoint.transform.position, Quaternion.identity); // Lime
                     } else if (index == 4) {
                         newBottle = Instantiate(bottles[5], bottleSpawnPoint.transform.position, Quaternion.identity); // Cranberry
+                    }
+                    if (index == 5) {
+                        Shakers[0].GetComponent<SpriteRenderer>().sprite = Shakers[1].GetComponent<SpriteRenderer>().sprite;
+                        Shakers[0].name = "Boston_Shaker_Closed";
+                        Shakers[0].AddComponent<Shaking>();
+                        spawned = true;
                     }
                     break;
                 case TicketScript.Drinks.Long_Island:
@@ -74,6 +96,12 @@ public class FrontBarSpawn : MonoBehaviour {
                         newBottle = Instantiate(bottles[8], bottleSpawnPoint.transform.position, Quaternion.identity); // Lemon
                     } else if (index == 7) {
                         newBottle = Instantiate(bottles[10], bottleSpawnPoint.transform.position, Quaternion.identity); // Sugar
+                    }
+                    if (index == 8) {
+                        Shakers[0].GetComponent<SpriteRenderer>().sprite = Shakers[1].GetComponent<SpriteRenderer>().sprite;
+                        Shakers[0].name = "Boston_Shaker_Closed";
+                        Shakers[0].AddComponent<Shaking>();
+                        spawned = true;
                     }
                     break;
             }
