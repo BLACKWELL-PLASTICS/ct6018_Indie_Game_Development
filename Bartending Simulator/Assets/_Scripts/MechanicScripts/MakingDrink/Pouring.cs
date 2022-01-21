@@ -21,6 +21,7 @@ public class Pouring : MonoBehaviour {
     AudioSource as_pouringS;
     AudioSource as_pouring;
     AudioSource as_pouringE;
+
     void Start() {
         ticketScript = GameObject.Find("btn_Ticket").GetComponent<TicketScript>();
         currentDrink = ticketScript.GetCurrentDrink();

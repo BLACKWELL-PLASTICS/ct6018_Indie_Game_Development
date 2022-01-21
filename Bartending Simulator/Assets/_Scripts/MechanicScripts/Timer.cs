@@ -25,7 +25,7 @@ public class Timer : MonoBehaviour
     {
         timer -= Time.deltaTime;
 
-        if (timer <= 0.0f) {
+        if (timer < 0.0f) {
             // Level Lost
             txt_timer.color = Color.white;
             txt_timer.text = "Timer : 0.0";

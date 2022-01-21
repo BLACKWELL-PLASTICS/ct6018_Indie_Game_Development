@@ -33,7 +33,9 @@ public class Crosses : MonoBehaviour
             crosses[2].SetActive(true);
             restart.SetActive(true);
             Timer.timer = 0.0f;
+
             // End Game Condition
+            GameObject.Find("Canvas").GetComponent<EndLevel>().BadEnding();
         }
     }
 }

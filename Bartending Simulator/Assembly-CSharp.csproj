@@ -80,6 +80,7 @@
     <Compile Include="Assets\_Scripts\UI\Buttons.cs" />
     <Compile Include="Assets\_Scripts\UI\Crosses.cs" />
     <Compile Include="Assets\_Scripts\UI\Recipies.cs" />
+    <Compile Include="Assets\_Scripts\UI\SavingSystem.cs" />
     <Compile Include="Assets\_Scripts\UI\UserInterface.cs" />
     <Reference Include="UnityEngine">
       <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.14f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>

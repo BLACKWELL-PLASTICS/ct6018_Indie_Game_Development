@@ -19,6 +19,11 @@ public class Shaking : MonoBehaviour
     TicketScript ticketScript;
     TicketScript.Drinks currentDrink;
 
+    AudioSource as_Shaking;
+
+    Color pink = new Color(1, 0 , 0.9295864f, 1);
+    Color green = new Color(0.4188441f, 1 , 0.4103774f, 1);
+
     // Start is called before the first frame update
     void Start()
     {
@@ -28,14 +33,17 @@ public class Shaking : MonoBehaviour
         glass[2] = GameObject.Find("Highball");
         glass[3] = GameObject.Find("Rock");
         glass[4] = GameObject.Find("GSP");
+
         ticketScript = GameObject.Find("btn_Ticket").GetComponent<TicketScript>();
         currentDrink = ticketScript.GetCurrentDrink();
+        as_Shaking = gameObject.GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
     void Update()
     {
         if (count != endCount) {
+            //as_Shaking.Play();
             // direction = the phones acceleration * movement speed
             directionY = -Input.acceleration.x * moveSpeed;
             // Move glass up but clamp the top and bottom position
@@ -45,13 +53,14 @@ public class Shaking : MonoBehaviour
                 hasReached = true;
                 count++;
             }
+
             if (hasReached == true && transform.position.y == 9.68f) {
                 hasReached = false;
                 count++;
             }
         } else {
+            //as_Shaking.Stop();
             // Spawn Glass
-            // End Game Good condition
             int glassNo = 0;
             switch (currentDrink) {
                 case TicketScript.Drinks.Daiquiri:
@@ -67,32 +76,32 @@ public class Shaking : MonoBehaviour
                     glassNo = 2;
                     break;
             }
-            Debug.LogError(glassNo);
+            // Glass colour
             if (spawned == false) {
                 // Spawn Glass
                 GameObject newGlass = Instantiate(glass[glassNo], glass[4].transform.position, Quaternion.identity);
-                //switch (currentDrink) {
-                //    case TicketScript.Drinks.Daiquiri:
-                //        newGlass.GetComponent<SpriteRenderer>().color = Color.green;
-                //        break;
-                //    case TicketScript.Drinks.Margarita:
-                //        newGlass.GetComponent<SpriteRenderer>().color = Color.green;
-                //        break;
-                //    case TicketScript.Drinks.Cosmopolitan:
-                //        newGlass.GetComponent<SpriteRenderer>().color = Color.red;
-                //        break;
-                //    case TicketScript.Drinks.Long_Island:
-                //        newGlass.GetComponent<SpriteRenderer>().color = Color.white;
-                //        break;
-                //}
+                switch (currentDrink) {
+                    case TicketScript.Drinks.Daiquiri:
+                        newGlass.GetComponent<SpriteRenderer>().color = green;
+                        break;
+                    case TicketScript.Drinks.Margarita:
+                        newGlass.GetComponent<SpriteRenderer>().color = green;
+                        break;
+                    case TicketScript.Drinks.Cosmopolitan:
+                        newGlass.GetComponent<SpriteRenderer>().color = pink;
+                        break;
+                    case TicketScript.Drinks.Long_Island:
+                        newGlass.GetComponent<SpriteRenderer>().color = Color.white;
+                        break;
+                }
 
                 Destroy(newGlass.GetComponent<Rigidbody2D>());
                 Destroy(newGlass.GetComponent<BoxCollider2D>());
                 Destroy(newGlass.GetComponent<Glass>());
 
                 spawned = true;
-
-                // GOOD GAME END
+                // End Game Good condition
+                GameObject.Find("Canvas").GetComponent<EndLevel>().GoodEnding();
 
             }
         }

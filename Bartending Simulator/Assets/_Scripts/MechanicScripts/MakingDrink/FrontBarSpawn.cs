@@ -16,7 +16,7 @@ public class FrontBarSpawn : MonoBehaviour {
 
     // Start is called before the first frame update
     void Start() {
-        bottleSpawnPoint = GameObject.FindGameObjectWithTag("BSP");
+        bottleSpawnPoint = GameObject.Find("BSP");
         Shakers[0] = GameObject.Find("Boston_Shaker_Open");
         i = index;
         ticketScript = GameObject.Find("btn_Ticket").GetComponent<TicketScript>();
@@ -31,6 +31,7 @@ public class FrontBarSpawn : MonoBehaviour {
             spawned = false;
             Destroy(newBottle);
         }
+
         if (spawned == false) {
             switch (currentDrink) {
                 case TicketScript.Drinks.Daiquiri:
