@@ -18,11 +18,17 @@ public class Pouring : MonoBehaviour {
     TicketScript.Drinks currentDrink;
 
     Text text;
-
+    AudioSource as_pouringS;
+    AudioSource as_pouring;
+    AudioSource as_pouringE;
     void Start() {
         ticketScript = GameObject.Find("btn_Ticket").GetComponent<TicketScript>();
         currentDrink = ticketScript.GetCurrentDrink();
         text = GameObject.Find("txt_PouringTimer").GetComponent<Text>();
+
+        as_pouringS = GameObject.Find("as_PouringS").GetComponent<AudioSource>();
+        as_pouring  = GameObject.Find("as_Pouring").GetComponent<AudioSource>();
+        as_pouringE = GameObject.Find("as_PouringE").GetComponent<AudioSource>();
 
         Timer();
     }
@@ -32,7 +38,7 @@ public class Pouring : MonoBehaviour {
         if (isPouring == true) {
             if (StartedPouring == true) {
                 // Play started pouring audio
-
+                as_pouringS.Play();
                 // Started Pouring false
                 StartedPouring = false;
             }
@@ -43,12 +49,15 @@ public class Pouring : MonoBehaviour {
             if (timer < -1.0f) {
                 text.color = Color.red;
             }
-
+            as_pouring.Play();
             // count down timer
             timer -= Time.deltaTime;
         }
 
         if (EndedPouring == true) {
+            as_pouring.Stop();
+            as_pouringE.Play();
+
             text.color = Color.white;
             if (timer <= 0.0f && timer > -1.0f) {
                 // next bottle
