@@ -74,11 +74,15 @@
     <Compile Include="Assets\_Scripts\MechanicScripts\MakingDrink\FrontBarSpawn.cs" />
     <Compile Include="Assets\_Scripts\MechanicScripts\MakingDrink\Pouring.cs" />
     <Compile Include="Assets\_Scripts\MechanicScripts\MakingDrink\Shaking.cs" />
+    <Compile Include="Assets\_Scripts\MechanicScripts\Softs.cs" />
     <Compile Include="Assets\_Scripts\MechanicScripts\TicketScript.cs" />
     <Compile Include="Assets\_Scripts\MechanicScripts\TicketSpawnScript.cs" />
     <Compile Include="Assets\_Scripts\MechanicScripts\Timer.cs" />
+    <Compile Include="Assets\_Scripts\MechanicScripts\Upgrades.cs" />
     <Compile Include="Assets\_Scripts\UI\Buttons.cs" />
     <Compile Include="Assets\_Scripts\UI\Crosses.cs" />
+    <Compile Include="Assets\_Scripts\UI\Menu\LoadScenes.cs" />
+    <Compile Include="Assets\_Scripts\UI\Menu\Money.cs" />
     <Compile Include="Assets\_Scripts\UI\Recipies.cs" />
     <Compile Include="Assets\_Scripts\UI\SavingSystem.cs" />
     <Compile Include="Assets\_Scripts\UI\UserInterface.cs" />

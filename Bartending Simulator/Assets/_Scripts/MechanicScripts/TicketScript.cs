@@ -19,10 +19,12 @@ public class TicketScript : MonoBehaviour {
     }
 
     private int randomDrink;
-    private Drinks currentDrink;
+    public Drinks currentDrink;
     public Drinks GetCurrentDrink() { return currentDrink; }
     
     int index = 0;
+
+    int a = 0;
 
     private void Awake() {
         // Add objects to List
@@ -36,6 +38,7 @@ public class TicketScript : MonoBehaviour {
     }
 
     private void Update() {
+        a = SavingSystem.LoadInt("BarUpgrade");
         if (index == 2) {
             CameraMovement.isOrderCollected = true;
             index++;
@@ -66,7 +69,12 @@ public class TicketScript : MonoBehaviour {
     private void ResetDrink() {
         index = 0;
         // Choose random drink
-        randomDrink = Random.Range(0, 3);
+
+        if (a == 0) {
+            randomDrink = Random.Range(0, 3);
+        } else if (a == 1) {
+            randomDrink = Random.Range(0, 4);
+        }
         currentDrink = (Drinks)randomDrink;
 
         // Set Ticket UI
@@ -101,7 +109,7 @@ public class TicketScript : MonoBehaviour {
             case Drinks.Long_Island: {
                     foreach (GameObject item in ticketUI) {
                         if (item.name == "DrinkName") {
-                            item.GetComponent<RawImage>().texture = textureArray[4]; // TODO - change texture
+                            item.GetComponent<RawImage>().texture = textureArray[8];
                             CameraMovement.isFridgeRequired = true;
                         }
                     }

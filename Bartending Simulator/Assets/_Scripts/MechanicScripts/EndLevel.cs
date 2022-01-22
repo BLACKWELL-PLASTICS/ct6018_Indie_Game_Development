@@ -20,7 +20,9 @@ public class EndLevel : MonoBehaviour
 
     public void GoodEnding() {
         GameEndedGood = true;
-        Timer.timer = 0.0f;
+        btn_Menu.gameObject.SetActive(true);
+
+        Timer.timer = 0.0000001f;
         int money = SavingSystem.LoadInt("PlayerMoney");
         // GOOD GAME END
         if (Crosses.index == 0) { // NO Cross
@@ -36,7 +38,6 @@ public class EndLevel : MonoBehaviour
             SavingSystem.SaveInt("PlayerMoney", money + 20);
             txt_MoneyMade.text = "+20 !";
         }
-        btn_Menu.gameObject.SetActive(true);
     }
 
     public void BadEnding() {
@@ -47,11 +48,35 @@ public class EndLevel : MonoBehaviour
     }
 
     public void Menu() {
+        CameraMovement.areAlcoholBottlesCollected = false;
+        CameraMovement.areSoftBottlesCollected = false;
+        CameraMovement.isCycleComplete = false;
+        CameraMovement.isFridgeRequired = false;
+        CameraMovement.isGlassCollected = false;
+        CameraMovement.isOrderCollected = false;
+
+        btn_Menu.gameObject.SetActive(false);
+        btn_Restart.gameObject.SetActive(false);
+
+        Crosses.index = 0;
+
         // Load Menu Scene
         SceneManager.LoadScene(0);
     }
     public void RestartLevel() {
+        CameraMovement.areAlcoholBottlesCollected = false;
+        CameraMovement.areSoftBottlesCollected = false;
+        CameraMovement.isCycleComplete = false;
+        CameraMovement.isFridgeRequired = false;
+        CameraMovement.isGlassCollected = false;
+        CameraMovement.isOrderCollected = false;
+
+        btn_Menu.gameObject.SetActive(false);
+        btn_Restart.gameObject.SetActive(false);
+
+        Crosses.index = 0;
+
         // Reload current scene
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        SceneManager.LoadScene(1);
     }
 }
