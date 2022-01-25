@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class EndLevel : MonoBehaviour
 {
-    public static bool GameEndedGood = false;
+    public static bool GameEnded = false;
     // UI
     [SerializeField] Text   txt_MoneyMade;
     [SerializeField] Button btn_Menu;
@@ -19,10 +19,9 @@ public class EndLevel : MonoBehaviour
     }
 
     public void GoodEnding() {
-        GameEndedGood = true;
+        GameEnded = true;
         btn_Menu.gameObject.SetActive(true);
 
-        Timer.timer = 0.0000001f;
         int money = SavingSystem.LoadInt("PlayerMoney");
         // GOOD GAME END
         if (Crosses.index == 0) { // NO Cross
@@ -59,6 +58,9 @@ public class EndLevel : MonoBehaviour
         btn_Restart.gameObject.SetActive(false);
 
         Crosses.index = 0;
+        FrontBarSpawn.index = 0;
+
+        GameEnded = false;
 
         // Load Menu Scene
         SceneManager.LoadScene(0);
@@ -75,6 +77,10 @@ public class EndLevel : MonoBehaviour
         btn_Restart.gameObject.SetActive(false);
 
         Crosses.index = 0;
+        FrontBarSpawn.index = 0;
+        
+
+        GameEnded = false;
 
         // Reload current scene
         SceneManager.LoadScene(1);

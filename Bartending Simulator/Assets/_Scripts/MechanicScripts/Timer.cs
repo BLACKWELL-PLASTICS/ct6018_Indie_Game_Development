@@ -23,9 +23,16 @@ public class Timer : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (EndLevel.GameEnded == true) {
+            Time.timeScale = 0.0f;
+        
+        } else {
+            Time.timeScale = 1.0f;
+        }
+
         timer -= Time.deltaTime;
 
-        if (timer < 0.0f) {
+        if (timer < -0.1f) {
             // Level Lost
             txt_timer.color = Color.white;
             txt_timer.text = "Timer : 0.0";
@@ -38,6 +45,7 @@ public class Timer : MonoBehaviour
             if (timer <= 5.0f) { // Colour Change
                 textTimer += Time.deltaTime;
 
+                // Timer Text colour
                 if (textTimer >= 0.5f && textTimer < 1) {
                     txt_timer.color = Color.red;
                 } else if (textTimer >= 1f && textTimer < 1.5f) {

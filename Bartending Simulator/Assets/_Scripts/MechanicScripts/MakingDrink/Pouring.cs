@@ -4,25 +4,28 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public class Pouring : MonoBehaviour {
+    // These variables are changed by the accelleromiter script
     public bool isPouring = false;
     public bool StartedPouring = false;
     public bool EndedPouring = false;
 
-    float doubleMeasure = 4.2f; // Double
-    float singleMeasure = 2.1f; // Single
-    float tenML = 0.5f; // 10ml
+    float doubleMeasure = 2.1f; // Double
+    float singleMeasure = 1f; // Single
+    float tenML = 0.2f; // 10ml
 
     float timer = 0.0f;
 
     TicketScript ticketScript;
     TicketScript.Drinks currentDrink;
 
+    // UI and Audio
     Text text;
     AudioSource as_pouringS;
     AudioSource as_pouring;
     AudioSource as_pouringE;
 
     void Start() {
+        // Reference objects
         ticketScript = GameObject.Find("btn_Ticket").GetComponent<TicketScript>();
         currentDrink = ticketScript.GetCurrentDrink();
         text = GameObject.Find("txt_PouringTimer").GetComponent<Text>();
@@ -77,7 +80,7 @@ public class Pouring : MonoBehaviour {
     }
 
     void Timer() {
-        // Set timer
+        // Set timer depending on current drink and bottle index
         switch (currentDrink) {
             case TicketScript.Drinks.Daiquiri:
                 if (FrontBarSpawn.index == 1) {
